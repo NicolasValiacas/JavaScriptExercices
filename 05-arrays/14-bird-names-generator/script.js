@@ -38,5 +38,33 @@
         "arboré",
     ]);
 
-    // your code here
+    var btn=document.getElementById('run');
+    var btnTarget=document.getElementById('target');
+    var tabAdjectives=Array.from(adjectives);
+
+    function randomNumbers(){
+        let min=1;
+        let max=12;
+        let nombre=Math.floor(Math.random() * (max-min))+min;
+        return nombre;
+    }
+
+    function randomNumbersAdj(){
+        let min=1;
+        let max=12;
+        let nombre=Math.floor(Math.random() * (max-min))+min;
+        return nombre;
+    }
+
+    btn.addEventListener('click', function (){
+
+        let randomBirds=birds[randomNumbers()];
+        let randomAdj=tabAdjectives[randomNumbersAdj()];
+
+        if(randomAdj.fem== true){
+            btnTarget.innerHTML=randomBirds.name + " " + randomAdj + "e";
+        } else {
+            btnTarget.innerHTML=randomBirds.name + " " + randomAdj;
+        }
+    })
 })();

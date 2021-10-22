@@ -10,5 +10,17 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let btn=document.getElementById('run');
+
+    btn.addEventListener('click', function (){
+        let Valeur=new Object();
+
+        Valeur.firstname="Nicolas";
+        Valeur.lastname="Valiacas";
+        Valeur.age=27; 
+        Valeur.city="Bruxelles (Uccle)";
+        Valeur.country="Belgique";
+
+        console.log(Valeur);
+    })
 })();
