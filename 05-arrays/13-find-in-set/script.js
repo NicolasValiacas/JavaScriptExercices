@@ -22,5 +22,14 @@
         "Lucas",
     ]);
 
-    // your code here
+    let btn=document.getElementById('run'); 
+
+    btn.addEventListener('click', function(){
+        console.log(people.size + " personnes sont présentes dans le tableau.");
+        if(people.has('Alexandre')==true){
+            console.log("Il est laaaaaaaaaa!!!!! Le beau gosse, alexandre!")
+        } else {
+            console.log("Il est ou Alex ??? Trouvez le moi avant que je le frappe!");
+        }
+    })
 })();

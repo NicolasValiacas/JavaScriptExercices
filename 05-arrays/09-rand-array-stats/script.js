@@ -36,6 +36,9 @@
         btnMin.innerHTML=Math.min(...tabAleatoire);
 
         let addition=(previousValue, currentValue) => previousValue+currentValue;
-        btnSomme
+        btnSomme.innerHTML=tabAleatoire.reduce(addition);
+        let total=tabAleatoire.reduce(addition);
+
+        btnMoyenne.innerHTML=total/tabAleatoire.length;
     })
 })();

@@ -27,5 +27,7 @@
         "cerise",
     ];
 
-    // your code here
+    const Double=new Set(fruits);
+    const TableauDouble=[...Double];
+    console.log(TableauDouble);
 })();

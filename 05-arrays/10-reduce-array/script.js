@@ -88,5 +88,17 @@
         },
     ];
 
-    // your code here
+    let btn=document.getElementById('run');
+    let AGETableau=[];
+
+    btn.addEventListener('click', function(){
+        for (i=0; i<people.length; i++){
+
+            let addition=(previousValue, currentValue) => previousValue+currentValue;
+            let age=people[i].age;
+            AGETableau.push(age);
+            let somme=AGETableau.reduce(addition);
+            console.log(somme);
+        }
+    })
 })();

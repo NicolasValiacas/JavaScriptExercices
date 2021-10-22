@@ -23,5 +23,13 @@
         "cerise",
     ]);
 
-    // your code here
+    let btn=document.getElementById("run"); 
+
+    btn.addEventListener('click', function (){
+        fruits.delete('cerise');
+        fruits.delete('pomme');
+        fruits.add('kiwi');
+        fruits.add('banane');
+        console.log(fruits);
+    })
 })();
