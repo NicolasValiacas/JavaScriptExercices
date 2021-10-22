@@ -10,5 +10,35 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    const colorChange = color => {
+        document.body.style.background = color;
+    }
+
+    Array.from(document.querySelectorAll("button")).forEach($btn =>
+        $btn.addEventListener(
+            "click",
+            () => (colorChange($btn.id), false),
+        )
+    );
+
+    var red = document.getElementById("red");
+    var redId = red.id;
+    console.log(red);
+    red.onclick = changeColor(redId);
+    var green = document.getElementById("green");
+    var greenId = green.id;
+    console; log(green);
+    green.onclick = changeColor(greenId);
+    var blue = document.getElementById("blue");
+    var blueId = blue.id;
+    console.log(blue);
+    blue.onclick = changeColor(blueId);
+    var yellow = document.getElementById("yellow");
+    var yellowId = yellow.id;
+    console.log(yellow);
+    yellow.onclick = changeColor(yellowId);
+
+    function changeColor(color) {
+        document.body.style.backgroundColor = color;
+    }
 })();

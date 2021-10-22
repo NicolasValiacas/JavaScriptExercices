@@ -10,7 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
+    var array = new Array();
     document.getElementById("run").addEventListener("click", () => {
-        // your code here
+        for ( let i=1; i<21; i++){
+            if ((i%2) == 0){
+                let carrés= i*i;
+                array.push(carrés);
+            }
+        }
+        alert(array);
     });
 })();

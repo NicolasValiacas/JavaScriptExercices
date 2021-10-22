@@ -10,6 +10,14 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+    var btn=document.getElementById("target");
+
+    btn.addEventListener("click", function(){
+        const jours = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+        const mois = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+        var today = new Date();
+        var heure = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var result = jours[today.getDay()] + " " + today.getDate() + " " + mois[today.getMonth()] + " " + today.getFullYear();
+        document.write(result + " " + heure);
+    })
 })();

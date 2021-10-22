@@ -38,5 +38,5 @@
         },
     ];
 
-    // your code here
+    people.forEach((element)=> console.log(element.lastname))
 })();

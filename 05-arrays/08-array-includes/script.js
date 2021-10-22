@@ -25,5 +25,13 @@
         "cerise",
     ];
 
-    // your code here
+    var btn=document.getElementById('run');
+    btn.addEventListener('click', function(){
+
+        if(fruits.includes('pomme')==true){
+            console.log("Il y a des pommes")
+        } else {
+            console.log("Il n'y a pas de pommes");
+        }
+    })
 })();

@@ -10,6 +10,16 @@
 // You will have time to focus on it later.
 
 (() => {
-    // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
-    // your code here
+    var btn=document.getElementById("target");
+    var today= new Date();
+
+    var hours=today.getHours();
+    var minutes=today.getMinutes();
+    var hoursM=(hours * 60) + minutes;
+
+    if (hoursM < 1050){
+        btn.textContent="Bonjour";
+    } else{
+        btn.textContent="Bonsoir";
+    }
 })();

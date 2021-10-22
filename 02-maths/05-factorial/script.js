@@ -13,6 +13,15 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("run").addEventListener("click", () => {
-        // your code here
+        var nombre = document.getElementById("number").ariaValueMax;
+
+        function facto(nombre) {
+            if (nombre <= 1){
+                return 1;
+            } else {
+                return (nombre * facto(nombre - 1));
+            }
+        }
+        document.write(facto(nombre));
     });
 })();
