@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let input=document.getElementById('pass-one');
+
+    input.addEventListener('change', () => {
+        const valueInput=document.getElementById('pass-one').value;
+        const regex=/[0-9a-zA-Z_]{8,}/g;
+        const regex2=/[0-9]/g;
+        const mdpOK=regex.test(valueInput);
+        const mdpOk2=valueInput.match(regex2);
+
+        if(mdpOK==true && mdpOk2.length>=2){
+            document.getElementById('validity').innerHTML='Ok';
+        }else{
+            alert('Le mot de passe doit contenir minimum 8 caractères dont 2 chiffres!');
+        }
+    })
 })();

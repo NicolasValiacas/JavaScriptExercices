@@ -10,5 +10,19 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var btn=document.getElementById('run');
+    btn.addEventListener('click', function (){
+        var mdp1=document.getElementById('pass-one').value;
+        var mdp2=document.getElementById('pass-two').value;
+        var input1=document.getElementById('pass-one');
+        var input2=document.getElementById('pass-two');
+
+        if(mdp1===mdp2){
+            console.log('Mot de passe correct');
+        } else {
+            input1.classList.add('Réessayez');
+            input2.classList.add('Réessayez');
+        }
+        console.log(input1,input2);     
+    })
 })();
