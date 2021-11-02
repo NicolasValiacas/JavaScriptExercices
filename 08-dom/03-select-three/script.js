@@ -10,5 +10,8 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var Nope=document.getElementsByClassName('target');
+    for (i=0; i<Nope.length; i++){
+        cible[i].innerHTML="owned";
+    }
 })();

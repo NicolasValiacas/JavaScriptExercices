@@ -10,5 +10,5 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var own=document.querySelector('p.target').innerHTML="Owned on est laaaaaaa"
 })();

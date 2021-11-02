@@ -10,5 +10,30 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    var cible=document.getElementById('target');
+    var table=document.createElement('table');
+    table.setAttribute('id', 'table');
+    cible.appendChild(table);
+    var nombre=0;
+
+    for(i=0; i<10; i++){
+        var tab=document.getElementById('table');
+        var TLigne=document.createElement('tr');
+        tab.appendChild(TLigne);
+        var TCol=document.createElement('th');
+        TCol.innerHTML="Table de "+(nombre+1);
+        TLigne.appendChild(TCol);
+
+        function table(nombre){
+            for(j=1; j<11; j++){
+                var createTr=document.createElement('tr');
+                tab.appendChild(createTr);
+                var createTd=document.createElement('td');
+                createTd.innerHTML=j+"x"+nombre+"="+nombre*j;
+                createTr.appendChild(createTd);
+            }
+        }
+        nombre++;
+        table(nombre);
+    }
 })();
