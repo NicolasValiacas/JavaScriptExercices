@@ -10,5 +10,11 @@
 // You will have time to focus on it later.
 
 (() => {
-    // your code here
+    let range=document.getElementById('slider');
+    let rangeValue=document.getElementById('target');
+
+    range.oninput=( ()=>{
+        let value=range.value;
+        rangeValue.textContent=value;
+    })
 })();
